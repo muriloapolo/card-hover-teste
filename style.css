@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.main {
+    font-size: 2rem;
+    background: rgb(34, 193, 195);
+    background: radial-gradient(circle, rgba(34, 193, 195, 1) 0%, rgba(213, 206, 189, 1) 42%, rgba(45, 157, 253, 1) 100%);
+    background-position: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.caixaCard {
+    width: 350px;
+    height: 350px;
+    box-sizing: border-box;
+    perspective: 1000px;
+    position: relative;
+    border-radius: 50px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.flip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixaCard:hover .flip{ 
+    transform:scale(1.2) rotateY(180deg);
+    transition: transform ease 0.6s;
+    transform-style: preserve-3d;  
+ 
+
+}
+
+
+.cardBack,.cardFront {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+    position: absolute;    
+    backface-visibility: hidden;      
+   animation: circ 2s ease-in infinite alternate;
+}
+@keyframes circ {
+    0%{
+        box-shadow: 0px 5px 10px rgb(201, 223, 110);
+    }
+    50%{
+        box-shadow: 0px 10px 20px rgba(183, 255, 0, 0.533);
+    }
+    100%{
+        box-shadow: 0px 5px 25px 25px rgba(67, 83, 34, 0.454);
+    }
+}
+
+.cardFront {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid blanchedalmond;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+}
+.cardBack img{
+    width:250px;
+    border-radius: 50%;
+
+
+}
+
+
+.cardBack { 
+    width:250px;
+    border-radius: 50%;
+    transform: rotateY(180deg);
+    width:250px;
+    border-radius: 50%;
+    text-align: center;
+ 
+   
+
+}
